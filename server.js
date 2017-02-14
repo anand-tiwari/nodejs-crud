@@ -15,7 +15,7 @@ MongoClient.connect('mongodb://vahid:vahid@ds151049.mlab.com:51049/data-informat
 	if(err) return console.log(err)
 	db = database;
 	app.listen(port, function() {
-  		console.log('listening on '+ port);
+		console.log(`app listening on http://localhost:${port}`);
 	});
 });
 
