@@ -1,0 +1,50 @@
+body{
+	background-color: #F1F1F1;
+}
+
+.hide{
+	display: none;
+}
+
+li{
+	margin: 8px 0px;
+    list-style-type: none;
+    padding: 20px 0 33px;
+    background: #FFFFFF;
+}
+
+.edit, .delete{
+	padding: 4px 15px;
+    cursor: pointer;
+    background-color: #F1F1F1;
+}
+
+.quote-name{
+	/*margin-right: 30px;*/
+	width: 40%;
+    float: left;
+}
+.quote-text{
+	width: 60%;
+    float: left;	
+}
+
+.quote-section{
+	width: 80%;
+	float: left;
+}
+.option-section{
+	width: 20%;
+	float: right;
+}
+
+.right-section, .left-section{
+	width: 50%;
+	float: left;
+}
+
+.input-width{
+	width: 50%;
+    padding: 10px 0;
+    margin: 2px 0;
+}

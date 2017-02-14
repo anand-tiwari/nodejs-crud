@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD APPLICATION</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<div class="right-section">
+	<h1>Add new Quote ... ...</h1>
+	<form action="/quotes" method="POST">
+    	<input class="input-width" type="text" placeholder="name" name="name" required> <br>
+    	<textarea rows="6" cols="40" type="text" placeholder="quote" name="quote" required></textarea> <br>
+    	<button type="submit">Submit</button>
+	</form>
+	<ul class="quotes" style="padding-left: 5px;">
+	  <% for(var i=0; i<quotes.length; i++) {%>
+	    <li class="quote">
+	    	<div class="quote-section">
+	    		<div class="quote-name"><%= quotes[i].name %></div>
+	      		<div class="quote-text"><%= quotes[i].quote %></div>
+	    	</div>
+	      	<div class="option-section">
+	      		<span class="edit" objectId="<%= quotes[i]._id %>">edit</span>
+	      		<span class="delete" objectId="<%= quotes[i]._id %>">delete</span>	
+	      	</div>
+	    </li>
+	  <% } %>
+  	</ul>
+</div>
+<div class="form-container hide left-section">
+
+	<h1>Update the Quote ... ...</h1>
+	<!-- <form> -->
+		<!-- <input type="text" name="name" id="name" />
+		<input type="text" name="quote" id="quote" />
+ -->
+		<input class="input-width" id="name" type="text" placeholder="name" name="name" required> <br>
+    	<textarea rows="6" cols="40" type="text" placeholder="quote" name="quote" required id="quote"></textarea> <br>
+		<button class="save">save</button>
+		<button class="cancel">cancel</button>
+	<!-- </form> -->
+</div>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
